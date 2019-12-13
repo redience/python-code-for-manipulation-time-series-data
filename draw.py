@@ -1,7 +1,7 @@
-import numpy
+import numpy#just I need to use numpy, matplotlib to draw this file.
 import matplotlib
 import matplotlib.pyplot as plt
-from datetime import datetime
+from datetime import datetime#I tried to use date time, but I give up cause i can't make it show as i want.
 import matplotlib.dates as mdate
 is_first_line = True
 line_number = 0
@@ -17,17 +17,17 @@ second = -1
 values = []
 average = 0
 i = 0
-for row in open("C:/Users/yangjianlei/Desktop/learning/data for an hour.csv"):
+for row in open("C:/Users/yangjianlei/Desktop/learning/data for an hour.csv"):#I got somepproblem of uploading file.
     # C:/Users/yangjianlei/Desktop/learning/data for an hour.csv
     if is_first_line:
-        is_first_line = False
+        is_first_line = False#to make sure it doesn't read firstline.
     else:
-        values = row.split(",")
+        values = row.split(",")#split it to line.
         time = values[1]
         newtime = time.split(":")
         mc = newtime[1].split(".")
         # second = (float(newtime[0]) * 60) + float(mc[0]) + (float(mc[1]) * 0.1)
-        second += 1
+        second += 1#this file count the data every second, so i just use it.
         i += 1
         timein.append(second)
         elenumber = int(values[2])
